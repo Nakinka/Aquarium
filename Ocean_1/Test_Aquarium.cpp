@@ -47,22 +47,22 @@ TEST(removeWater,test4) {
 }
 
 TEST(getInf,test5){
-Aquarium aquarium("Test Aquarium", 100);
-aquarium.addFish("Goldfish");
-aquarium.addFish("Guppy");
-aquarium.addWater(50);
-
-CaptureStdout();
-aquarium.getAquariumInf();
-string output = GetCapturedStdout();
-
-string expectedOutput =
-"Aquarium Name: Test Aquarium\n"
-"Capacity: 100\n"
-"Fish count: 2\n"
-"Water level: 50\n";
-
-EXPECT_EQ(output, expectedOutput);
+	Aquarium aquarium("Test Aquarium", 100);
+	aquarium.addFish("Goldfish");
+	aquarium.addFish("Guppy");
+	aquarium.addWater(50);
+	
+	CaptureStdout();
+	aquarium.getAquariumInf();
+	string output = GetCapturedStdout();
+	
+	string expectedOutput =
+	"Aquarium Name: Test Aquarium\n"
+	"Capacity: 100\n"
+	"Fish count: 2\n"
+	"Water level: 50\n";
+	
+	EXPECT_EQ(output, expectedOutput);
 }
 
 TEST(addWater2, test6) {
@@ -262,41 +262,41 @@ TEST(FreshWaterFishReproduceTest,test18) {
 
 TEST(AddCoral,test19) {
 	Aquarium aquarium("Test Aquarium", 5);
-    Coral redCoral("Red");
-    Coral blueCoral("Blue");
-
-    aquarium.addCoral(redCoral);
-    aquarium.addCoral(blueCoral);
-
-    EXPECT_EQ(aquarium.getCoralCount(), 2);
+	Coral redCoral("Red");
+	Coral blueCoral("Blue");
+	
+	aquarium.addCoral(redCoral);
+	aquarium.addCoral(blueCoral);
+	
+	EXPECT_EQ(aquarium.getCoralCount(), 2);
 }
 
 TEST(RemoveCoral,test20) {
 	Aquarium aquarium("Test Aquarium", 5);
-    Coral redCoral("Red");
-    Coral blueCoral("Blue");
-
-    aquarium.addCoral(redCoral);
-    aquarium.addCoral(blueCoral);
-
-    aquarium.removeCoral(redCoral);
-
-    EXPECT_EQ(aquarium.getCoralCount(), 1);
-    EXPECT_TRUE(aquarium.isCoralInAquarium());
+	Coral redCoral("Red");
+	Coral blueCoral("Blue");
+	
+	aquarium.addCoral(redCoral);
+	aquarium.addCoral(blueCoral);
+	
+	aquarium.removeCoral(redCoral);
+	
+	EXPECT_EQ(aquarium.getCoralCount(), 1);
+	EXPECT_TRUE(aquarium.isCoralInAquarium());
 }
 
 TEST(PrintAquariumInfCoral,test21) {
 	Aquarium aquarium("Test Aquarium", 5);
-    Coral redCoral("Red");
-    Coral blueCoral("Blue");
-
-    aquarium.addCoral(redCoral);
-    aquarium.addCoral(blueCoral);
-
-    CaptureStdout();
-    aquarium.printAquariumInfoCorals();
-    string output = GetCapturedStdout();
-
+	Coral redCoral("Red");
+	Coral blueCoral("Blue");
+	
+	aquarium.addCoral(redCoral);
+	aquarium.addCoral(blueCoral);
+	
+	CaptureStdout();
+	aquarium.printAquariumInfoCorals();
+	string output = GetCapturedStdout();
+	
 	string expectedOutput =
 		"Aquarium information for corals:\n"
 		"Total corals: 2\n"
